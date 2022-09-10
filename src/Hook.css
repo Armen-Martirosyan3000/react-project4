@@ -1,0 +1,99 @@
+body {
+	background:url("https://kartinkin.net/uploads/posts/2021-07/1626825975_20-kartinkin-com-p-sinii-fon-biznes-krasivo-20.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+  } 
+  
+  .item-todo1 {
+	
+	padding: 12px;
+	width: 280px;
+	margin-left:465px;
+	
+	margin-top: 15px;
+	background: #33B4FF;
+	color: black;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+  }
+  
+    .item-text1 {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 20px;
+	
+	
+  }
+  
+  .input1 {
+	padding: 14px 32px 14px 16px;
+	border-radius: 4px 0 0 4px;
+	border: 2px solid blue;
+	outline: none;
+	background: transparent;
+	text-align: center;
+	margin-left: 465px;
+	font-size: 15px;
+	width: 200px;
+
+	
+   
+  }
+  
+  .butt1 {
+	padding: 16px 7px;
+	border:1px solid blue;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	outline: none;
+	background: #33B4FF;
+	color: black;
+	width: 50px;
+	
+  }
+  .butt1:hover{
+	background-color: blueviolet;
+	color:white
+  }
+  
+   .item-delete1 {
+	display: inline-block;
+	cursor: pointer;
+	float: right;
+	font-size: 22px;
+	position: relative;
+	color:black
+  }
+ 
+  .strike1 {
+	text-decoration: line-through;
+	color:black
+  
+  }
+  .h11{
+	border: 5px ridge blue;
+	width: 32%;
+	margin-left: 34%;
+	color: red;
+	display: flex;
+	justify-content: center;
+	
+  }
+
+  .HookButt{
+	padding: 10px;
+	border-radius: 25px;
+	font-size: 18px;
+	margin-left: 8%;
+	background: #00FDB2;
+	border: 3px ridge blue;
+  }
+
+  .HookButt:hover{
+	background:blueviolet;
+	color:white;
+	border: 3px solid #FFA813;
+	cursor: pointer;
+
+  }
