@@ -1,40 +1,30 @@
+//input-ի state-ToDoForm-wum պահպանվում են մեր input-ի state-ը(վիճակը)
 import { useState } from 'react'
-// TO DO ֆորմայում պահպանվելու է մեր input-ի state-ը(վիճակը)
 function ToDoForm({ addItem }) {
     const [userInput, setUserInput] = useState('')
+    //is provided by writing to the input-սա ապահովում է որպեսզի input-ում կարողանանք գրել
+    const handleChange = (e) => {
+        setUserInput(e.currentTarget.value)//input-ում տեղի ունեցող իրադարձությունը(e) մենք կստանանք currentTarget-ի միջոցով ու իրանից կստանանք value-ն(արժեքը)
+    }
+    //Adding the current value of userInput to the list-e.preventDefault() ֆունկցիայի միջոցով ուղարկում ենք userInput-ի ընթացիկ արժեքը ցուցակի մեջ
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        addItem(userInput)//Կապված է Hook.js-ի հետ
+        setUserInput("")//After save, the text written in Input is reset-երբ save ենք անում, input-ում գրված տեքստն է դուրս գալիս
+    }
 
-    const handleChange = (e) => {//սրանով ապահովվում է ինփութում որպեսզի կարողանանք գրել, առանց այս ֆունկցիայի հնարավոր չէ իմփութում գրել
-        setUserInput(e.currentTarget.value)//երբ որ ինփութում արժեքը փոխվում է e-ի միջոցով , մենք ստանում ենք արժեքները և այդ արժեքները ուղարկում ենք stat-ի մեջ օգտագործելով  setUserInput ֆունկցիան, ինփութում տեղի ունեցող իրադարձությունը(e) մենք կստանանք currentTarget-ի միջոցով ու իրանից կստանանք value-ն
-    }
-    
-    const handleSubmit = (e) => {//սրանով մենք կարողանում ենք ինփութում գրելով ինչ որ բան այնուհետև սեղմելով save կնոպկան ներքևում ցուցակի տեսքով ավելացնում է ինփութում գրվածը
-        e.preventDefault()// այստեղ մենք կրկին ստանում ենք իրադարձություններ,օգտագործելով e.preventDefault() ֆունկցիան հետո մենք կանչում ենք ֆունկցիան որով մենք պետք է ուղարկենք userInput-ի ընթացիկ արժեքը ցուցակի մեջ
-        addItem(userInput)//addItem ֆունկցիան ենք կանչում և իրեն տալիս ենք userInput-ը
-        setUserInput("")// սրանով մենք սահմանում ենք որ երբ ինփութի մեջ ինչ որ բան ենք գորւմ save ենք անում, տվյալ գրվածքը պահպանելուց հետո այդ գրվածքը ինփութից դուրս գա
-    }
-//սա նրա համար է որպեսզի առանց մկնիկի միայն կլավիատուրայով Enter կարողանանք անել ու save անի
-    // const handleKeyPress = (e) => {
-    //     if(e.key === "Enter") {
-    //         handleSubmit(e)//սրանով մենք կարողանում ենք ինփութում գրելով ինչ որ բան այնուհետև սեղմելով save կնոպկան ներքևում ցուցակի տեսքով ավելացնում է ինփութում գրվածը
-    //     }
-    // }
-    
     return (
-        
-        //onSubmit={handleSubmit} սրանով մենք կարողանում ենք ինփութում գրելով ինչ որ բան այնուհետև սեղմելով save կնոպկան ներքևում ցուցակի տեսքով ավելացնում է ինփութում գրվածը
+
+        //adding to the list-onSubmit={handleSubmit} սեղմելով save կնոպկան ներքևում ցուցակի տեսքով ավելացնում է input-ում գրվածը
         <form onSubmit={handleSubmit}>
-            
             <input className='input1'
                 value={userInput}
                 type="text"
-                onChange={handleChange}//սրանով ապահովվում է ինփութում որպեսզի կարողանանք գրել, առանց այս ֆունկցիայի հնարավոր չէ իմփութում գրել
-                // onKeyDown={handleKeyPress}//սա նրա համար է որպեսզի առանց մկնիկի միայն կլավիատուրայով կարողանանք աշխատել
+                onChange={handleChange}//input-ում գրելու ֆունկցիան է ապահովում
                 placeholder="Enter to-dos..."
-            />        
+            />
             <button className='butt1'>Save</button>
-           
         </form>
-        
     )
 }
 

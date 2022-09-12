@@ -1,16 +1,16 @@
-//տարրերի ցուցակ
+//list of items-տարրերի ցուցակ
 function ToDo({ item, toggleItem, removeItem }) {
     return (
-        //այստեղ պահպանվում է տարրերի(առաջադրանքների) դաշտը , ցուցակը
+        //return a list of elements-այստեղ վերադարձնում է տարրերի(առաջադրանքների) ցուցակը
         <div key={item.id} className="item-todo1">
-           {/* սրանով ապահովում է տարրերի վրա գիծ քաշելու հատկությունը */}
-            <div 
+            {/* this provides the ability to draw a line on elements-սա ապահովում է տարրերի վրա գիծ քաշելու հատկությունը */}
+            <div
                 className={item.complete ? "item-text1 strike1" : "item-text1"}
                 onClick={() => toggleItem(item.id)}
-                >
+            >
                 {item.value}
             </div>
-             {/* այստեղ տարրերի ջնջման կոճակի աշխատանքն է իրականացվում */}
+            {/* X button-այստեղ տարրերի ջնջման կոճակի աշխատանքն է իրականացվում */}
             <div className="item-delete1" onClick={() => removeItem(item.id)}>
                 X
             </div>
