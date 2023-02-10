@@ -3,16 +3,14 @@
 }
 
 .HookTodo {
-	background: url("https://kartinkin.net/uploads/posts/2021-07/1626825975_20-kartinkin-com-p-sinii-fon-biznes-krasivo-20.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 603px;
 }
 
 .item-todo1 {
 	padding: 12px;
 	width: 280px;
-	margin-left: 470px;
+	margin-left: 630px;
 	margin-top: 15px;
 	background: #33B4FF;
 	border-radius: 8px;
@@ -37,7 +35,7 @@
 	border: 2px solid blue;
 	outline: none;
 	text-align: center;
-	margin-left: 470px;
+	margin-left: 630px;
 	font-size: 15px;
 	width: 200px;
 }

@@ -1,14 +1,12 @@
 .ClassTodo {
-	background: url("https://kartinkin.net/uploads/posts/2022-02/1645004582_1-kartinkin-net-p-kartinki-dlya-fona-prezentatsii-1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 603px;
 }
 
 .app-title {
 	display: flex;
 	justify-content: center;
-	margin-left: 430px;
+	margin-left: 590px;
 	margin-bottom: 30px;
 	border: 5px ridge blue;
 	width: 400px;
@@ -19,11 +17,11 @@
 .div {
 	font-size: 25px;
 	color: blue;
-	margin-left: 565px
+	margin-left: 730px
 }
 
 .inputt {
-	margin-left: 505px;
+	margin-left: 670px;
 	padding: 10px;
 	font-size: 15px;
 	border: 3px solid blue;
@@ -49,7 +47,7 @@
 
 
 .ul1 {
-	margin-left: 540px;
+	margin-left: 720px;
 	font-size: 23px;
 }
 
